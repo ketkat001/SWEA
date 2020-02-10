@@ -1,16 +1,13 @@
 # -*- coding: utf-8 -*-
-def square(x, y):
-    num = x
-    if y==1:
-        return x
+def square(x, n, y):
+    n = n*x
+    if y == 1:
+        return n
     else:
-        return square(x * num, y-1)
-
-
-
-
+        return square(x, n, y-1)
 
 for t in range(1, 11):
     T = int(input())
     N, M = map(int, input().split())
-    print('#{} {}'.format(T, square(N, M)))
+    num = 1
+    print('#{} {}'.format(T, square(N, num, M)))
